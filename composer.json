@@ -1,0 +1,16 @@
+{
+    "name": "jhonxbatista/paa",
+    "authors": [
+        {
+            "name": "João Batista Gomes Silva",
+            "email": "jhonxbatista@gmail.com"
+        }
+    ],
+    "autoload": {
+    	"psr-4": {
+    		"App\\": "src/"
+    	}
+    },
+
+    "require": {}
+}
