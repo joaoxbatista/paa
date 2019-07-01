@@ -5,11 +5,13 @@ namespace App\classes;
 abstract class Sort {
 
 	public $array;
+	protected $name;
 	protected $operations_count;
 	protected $time;
 	protected $array_size;
 	
-	public function __construct($array) {
+	public function __construct($array, $name = "") {
+		$this->name = $name;
 		$this->array = $array;
 		$this->operations_count = 0;
 		$this->time = 0;
@@ -38,8 +40,12 @@ abstract class Sort {
 		$this->order();
 		$end_time = microtime(true);
 		$this->time = $end_time - $start_time;
-		echo "Tamanho do array: {$this->array_size} \n";
-		echo "Tempo de execução: {$this->time} segundos \n";
-		echo "Tempo de Quantidade de operações: {$this->operations_count} \n"; 
+		$this->order_count();
+		if($this->name != "") {
+			echo "{$this->name}\n";
+		}
+		echo "Tamanho do array: {$this->array_size}\n";
+		echo "Tempo de execução: {$this->time} segundos\n";
+		echo "Tempo de Quantidade de operações: {$this->operations_count}\n\n"; 
 	}
 }
