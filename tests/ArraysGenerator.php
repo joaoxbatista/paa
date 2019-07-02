@@ -5,27 +5,24 @@ namespace Tests;
 class ArraysGenerator {
     public $max_value_rand;
     public $order_arrays = [
-        10 => [],
-        100 => [],
         1000 => [],
         10000 => [],
         100000 => [],
+        1000000 => [],
     ];
 
     public $reverse_arrays = [
-        10 => [],
-        100 => [],
         1000 => [],
         10000 => [],
         100000 => [],
+        1000000 => [],
     ];
 
     public $shuffle_arrays = [
-        10 => [],
-        100 => [],
         1000 => [],
         10000 => [],
         100000 => [],
+        1000000 => [],
     ];
 
 
@@ -56,7 +53,6 @@ class ArraysGenerator {
     }
 
     public function save_arrays($path = "./arrays/", $name="arrays.json") {
-        
         $json_order = json_encode($this->order_arrays);
         $json_reverse = json_encode($this->reverse_arrays);
         $json_shuffle = json_encode($this->shuffle_arrays);
@@ -68,6 +64,13 @@ class ArraysGenerator {
     }
 
     public function open_arrays($path = "./arrays/", $name="arrays.json") {
-        
+        $file = file_get_contents("{$path}order_{$name}");
+        $this->order_arrays = json_decode($file, true);
+
+        $file = file_get_contents("{$path}reverse_{$name}");
+        $this->reverse_arrays = json_decode($file, true);
+
+        $file = file_get_contents("{$path}shuffle_{$name}");
+        $this->shuffle_arrays = json_decode($file, true);
     }
 }
