@@ -36,11 +36,11 @@ $sorter->log();
 $sorter->setArray($generator->shuffle_arrays[100000], "aleatorio");
 $sorter->log();
 
-$sorter->setArray($generator->order_arrays[1000000], "ordenado");
-$sorter->log();
-$sorter->setArray($generator->reverse_arrays[1000000], "reverso");
-$sorter->log();
-$sorter->setArray($generator->shuffle_arrays[1000000], "aleatorio");
-$sorter->log();
+// $sorter->setArray($generator->order_arrays[1000000], "ordenado");
+// $sorter->log();
+// $sorter->setArray($generator->reverse_arrays[1000000], "reverso");
+// $sorter->log();
+// $sorter->setArray($generator->shuffle_arrays[1000000], "aleatorio");
+// $sorter->log();
 
 $sorter->save_log();
