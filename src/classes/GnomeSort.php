@@ -32,7 +32,6 @@ class GnomeSort extends Sort{
 		$index = 0;
 		
 		while($index < $this->array_size) {
-			$this->addCount();
 			if($index == 0) {
 				$this->addCount();
 				$index++;
@@ -49,6 +48,10 @@ class GnomeSort extends Sort{
 				$this->array[$index] = $this->array[$index - 1];
 				$this->array[$index -1] = $temp;
 				$index--;
+
+				$this->addCount();
+				$this->addCount();
+				$this->addCount();
 			}
 		}	
 	}

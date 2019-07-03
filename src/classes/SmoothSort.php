@@ -260,7 +260,6 @@ class SmoothSort extends Sort{
 
 			if ($this->IsAscending($this->array[$this->r2], $t))
 			{
-                $this->addCount();
                 $this->b1 = 1;
 			}
 			else
@@ -272,7 +271,6 @@ class SmoothSort extends Sort{
 		}
 
 		if ($this->r1 - $this->r0) {
-            $this->addCount();
             $this->array[$this->r1] = $t;
         }
 			
@@ -290,34 +288,32 @@ class SmoothSort extends Sort{
 
 		while ($this->p1 > 0)
 		{
-            $this->addCount();
             while (($this->p1 & 1) == 0)
 			{
-                $this->addCount();
                 $this->p1 >>= 1;
 				$this->UP($this->b1, $this->c1, $temp);
 			}
 
+			$this->addCount();
 			$this->r3 = $this->r1 - $this->b1;
 
 			if (($this->p1 == 1) || $this->IsAscending($this->array[$this->r3], $t))
 			{
-                $this->addCount();
                 $this->p1 = 0;
 			}
 			else
 			{
+				$this->addCount();
 				--$this->p1;
 
 				if ($this->b1 == 1)
 				{
-                    $this->addCount();
                     $this->array[$this->r1] = $this->array[$this->r3];
 					$this->r1 = $this->r3;
 				}
 				else
 				{
-                    $this->addCount();
+                    
                     if ($this->b1 >= 3)
 					{
                         $this->addCount();
@@ -332,12 +328,11 @@ class SmoothSort extends Sort{
 						}
 						if ($this->IsAscending($this->array[$this->r2], $this->array[$this->r3]))
 						{
-                            $this->addCount();
-                            $this->array[$this->r1] = $this->array[$this->r3]; $this->r1 = $this->r3;
+							$this->array[$this->r1] = $this->array[$this->r3]; 
+							$this->r1 = $this->r3;
 						}
 						else
 						{
-                            $this->addCount();
                             $this->array[$this->r1] = $this->array[$this->r2];
 							$this->r1 = $this->r2;
 							$this->DOWN($this->b1, $this->c1, $temp);
@@ -349,7 +344,6 @@ class SmoothSort extends Sort{
 		}
 
 		if ($this->r0 - $this->r1) {
-            $this->addCount();
             $this->array[$this->r1] = $t;
         }
 			
@@ -381,15 +375,18 @@ class SmoothSort extends Sort{
 		$this->c = 1;
 		while ($this->q < $this->array_size)
 		{
-            $this->addCount();
+           
             $this->r1 = $this->r;
 			if (($this->p & 7) == 3)
 			{
-                $this->addCount();
+                
                 $this->b1 = $this->b;
 				$this->c1 = $this->c;
 				$this->Sift_count();
+
+				$this->addCount();
 				$this->p = ($this->p + 1) >> 2;
+
 				$this->UP($this->b, $this->c, $temp);
 				$this->UP($this->b, $this->c, $temp);
 			}
@@ -398,7 +395,6 @@ class SmoothSort extends Sort{
                 $this->addCount();
                 if ($this->q + $this->c < $this->array_size)
 				{
-                    $this->addCount();
                     $this->b1 = $this->b;
 					$this->c1 = $this->c;
 					$this->Sift_count();
@@ -413,12 +409,14 @@ class SmoothSort extends Sort{
 
 				while ($this->b > 1)
 				{
-                    $this->addCount();
                     $this->DOWN($this->b, $this->c, $temp);
 					$this->p <<= 1;
 				}
+				$this->addCount();
 				++$this->p;
 			}
+			$this->addCount();
+			$this->addCount();
 			++$this->q;
 			++$this->r;
 		}
@@ -433,13 +431,13 @@ class SmoothSort extends Sort{
 
 			if ($this->b == 1)
 			{
-                $this->addCount();
+				$this->addCount();
+				$this->addCount();
                 --$this->r;
 				--$this->p;
 
 				while (($this->p & 1) == 0)
 				{
-                    $this->addCount();
                     $this->p >>= 1;
 					$this->UP($this->b, $this->c, $temp);
 				}
@@ -448,18 +446,21 @@ class SmoothSort extends Sort{
 			{
 				if ($this->b >= 3)
 				{
-                    $this->addCount();
+					$this->addCount();
+					$this->addCount();
                     --$this->p;
 					$this->r = $this->r - $this->b + $this->c;
 					if ($this->p > 0){
-                        $this->addCount();
                         $this->SemiTrinkle_count();
                     }
 					$this->DOWN($this->b, $this->c, $temp);
+					$this->addCount();
+					$this->addCount();
 					$this->p = ($this->p << 1) + 1;
 					$this->r = $this->r + $this->c;
 					$this->SemiTrinkle_count();
 					$this->DOWN($this->b, $this->c, $temp);
+					$this->addCount();
 					$this->p = ($this->p << 1) + 1;
 				}
 			}

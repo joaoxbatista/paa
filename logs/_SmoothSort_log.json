@@ -1,14 +1,1 @@
-[
-    {"array_type":"ordenado","size_array":1000,"time":0.01463007926940918,"operations_count":7971},
-    {"array_type":"reverso","size_array":1000,"time":0.014795064926147461,"operations_count":15942},
-    {"array_type":"aleatorio","size_array":1000,"time":0.014198064804077148,"operations_count":23785},
-    {"array_type":"ordenado","size_array":10000,"time":0.2222440242767334,"operations_count":103741},
-    {"array_type":"reverso","size_array":10000,"time":0.21902799606323242,"operations_count":183697},
-    {"array_type":"aleatorio","size_array":10000,"time":0.19933009147644043,"operations_count":260051},
-    {"array_type":"ordenado","size_array":100000,"time":2.856502056121826,"operations_count":1060008},
-    {"array_type":"reverso","size_array":100000,"time":2.892651081085205,"operations_count":1859965},
-    {"array_type":"aleatorio","size_array":100000,"time":2.5909039974212646,"operations_count":2612590},
-    {"array_type":"ordenado","size_array":1000000,"time":35.749232053756714,"operations_count":10612529},
-    {"array_type":"reverso","size_array":1000000,"time":35.99046587944031,"operations_count":18612468},
-    {"array_type":"aleatorio","size_array":1000000,"time":31.833231925964355,"operations_count":26116380}
-]
+[{"array_type":"ordenado","size_array":1000,"time":0.02644801139831543,"operations_count":8989},{"array_type":"reverso","size_array":1000,"time":0.01503610610961914,"operations_count":17978},{"array_type":"aleatorio","size_array":1000,"time":0.014616966247558594,"operations_count":26839},{"array_type":"ordenado","size_array":10000,"time":0.2226269245147705,"operations_count":116826},{"array_type":"reverso","size_array":10000,"time":0.2252199649810791,"operations_count":206813},{"array_type":"aleatorio","size_array":10000,"time":0.20123004913330078,"operations_count":293198},{"array_type":"ordenado","size_array":100000,"time":2.902393102645874,"operations_count":1193185},{"array_type":"reverso","size_array":100000,"time":2.9132189750671387,"operations_count":2093172},{"array_type":"aleatorio","size_array":100000,"time":2.5932369232177734,"operations_count":2945827},{"array_type":"ordenado","size_array":1000000,"time":36.10805296897888,"operations_count":11945810},{"array_type":"reverso","size_array":1000000,"time":36.13569116592407,"operations_count":20945793},{"array_type":"aleatorio","size_array":1000000,"time":32.26700282096863,"operations_count":29449749}]
